@@ -59,3 +59,11 @@ sudo ./DNX-VNC1-VNC2-All-in-One.sh install full
 sudo ./DNX-VNC1-VNC2-All-in-One.sh uninstall
 ```
 
+---
+
+## Verbindungen im DNX-Ökosystem
+
+![DNX Gesamtarchitektur & Verbindungen](docs/dnx-architektur-verbindungen.png)
+
+* **Verbindung zu `DNX-Styler`, `DNX-Remote-VIEW` & `DNX-Photo-noVNC-Toggle`:** Die beiden umschaltbaren noVNC/websockify-Brücken (`VNC1` / `VNC2`) lassen sich parallel zu `DNX-Remote-VIEW` (`:8099` Workspace/Bridges) und dem Kopfbereich-Schalter (`t_novnc`) in der Werkzeugleiste betreiben.
+* **Verbindung zu `DNX-Receiver-Account-Control`:** Das Recht **`novnc`** über `:8095/api/me` entscheidet rollenabhängig über die Sichtbarkeit und Bedienbarkeit.
